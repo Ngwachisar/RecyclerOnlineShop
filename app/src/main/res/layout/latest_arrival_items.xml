@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ImageView
+            android:id="@+id/latest_arrival_item_image"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:src="@drawable/louis_vuitton"
+            android:scaleType="fitCenter"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/latest_arrival_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hyde Park"
+            android:fontFamily="@font/roboto_black"
+            app:layout_constraintTop_toBottomOf="@id/latest_arrival_item_image"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/latest_arrival_item_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOUIS VUITTON"
+            app:layout_constraintTop_toBottomOf="@id/latest_arrival_item_name"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <View
+            android:id="@+id/horizontal_line"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#dddddd"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/latest_arrival_item_brand"
+            tools:ignore="MissingConstraints" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/ratingBarStyleSmall"
+            android:numStars="5"
+            android:rating="4"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_line"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/latest_arrival_item_price"/>
+
+
+        <View
+            android:id="@+id/vertical_line"
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:background="#dddddd"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_line"
+            app:layout_constraintLeft_toRightOf="@id/ratingBar"/>
+
+        <TextView
+            android:id="@+id/latest_arrival_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="999,99999 KS"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_line"
+            app:layout_constraintLeft_toRightOf="@id/ratingBar"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2,110000KS"
+            android:background="@drawable/line"
+            app:layout_constraintTop_toBottomOf="@id/latest_arrival_item_price"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
